@@ -13,6 +13,9 @@
 		2B3C087527EF2C8500ADABB8 /* AppleBox.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C087327EF2C8500ADABB8 /* AppleBox.docc */; };
 		2B3C087827EF448200ADABB8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C087727EF448200ADABB8 /* main.swift */; };
 		2B3C087927EF448200ADABB8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C087727EF448200ADABB8 /* main.swift */; };
+		2B3C087E27EFEBAB00ADABB8 /* LayoutOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C087D27EFEBAB00ADABB8 /* LayoutOperator.swift */; };
+		2B3C08BB27F0176900ADABB8 /* LayoutOperator+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08BA27F0176900ADABB8 /* LayoutOperator+Location.swift */; };
+		2B3C08BD27F017FB00ADABB8 /* LayoutOperator+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		2B3C086427EF2BFA00ADABB8 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2B3C087327EF2C8500ADABB8 /* AppleBox.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = AppleBox.docc; sourceTree = "<group>"; };
 		2B3C087727EF448200ADABB8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2B3C087D27EFEBAB00ADABB8 /* LayoutOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOperator.swift; sourceTree = "<group>"; };
+		2B3C08BA27F0176900ADABB8 /* LayoutOperator+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutOperator+Location.swift"; sourceTree = "<group>"; };
+		2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutOperator+Size.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +54,7 @@
 				2B3C087327EF2C8500ADABB8 /* AppleBox.docc */,
 				2B3C085427EF2BF900ADABB8 /* Shared */,
 				2B3C086327EF2BFA00ADABB8 /* macOS */,
+				2B3C087B27EFEB5400ADABB8 /* iOS */,
 				2B3C085D27EF2BFA00ADABB8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +83,24 @@
 				2B3C086427EF2BFA00ADABB8 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		2B3C087B27EFEB5400ADABB8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C087C27EFEB8B00ADABB8 /* LayoutOperator */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		2B3C087C27EFEB8B00ADABB8 /* LayoutOperator */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C087D27EFEBAB00ADABB8 /* LayoutOperator.swift */,
+				2B3C08BA27F0176900ADABB8 /* LayoutOperator+Location.swift */,
+				2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */,
+			);
+			path = LayoutOperator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3C08BD27F017FB00ADABB8 /* LayoutOperator+Size.swift in Sources */,
 				2B3C087827EF448200ADABB8 /* main.swift in Sources */,
+				2B3C087E27EFEBAB00ADABB8 /* LayoutOperator.swift in Sources */,
+				2B3C08BB27F0176900ADABB8 /* LayoutOperator+Location.swift in Sources */,
 				2B3C087427EF2C8500ADABB8 /* AppleBox.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
