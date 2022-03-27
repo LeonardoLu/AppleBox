@@ -16,6 +16,16 @@
 		2B3C087E27EFEBAB00ADABB8 /* LayoutOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C087D27EFEBAB00ADABB8 /* LayoutOperator.swift */; };
 		2B3C08BB27F0176900ADABB8 /* LayoutOperator+Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08BA27F0176900ADABB8 /* LayoutOperator+Location.swift */; };
 		2B3C08BD27F017FB00ADABB8 /* LayoutOperator+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */; };
+		2B3C08C027F0334700ADABB8 /* PlaygroundBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08BF27F0334700ADABB8 /* PlaygroundBook.swift */; };
+		2B3C08C227F0351000ADABB8 /* PlaygroundBook+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08C127F0351000ADABB8 /* PlaygroundBook+Manifest.swift */; };
+		2B3C08C527F036C700ADABB8 /* File_Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08C427F036C700ADABB8 /* File_Folder.swift */; };
+		2B3C08C627F036C700ADABB8 /* File_Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08C427F036C700ADABB8 /* File_Folder.swift */; };
+		2B3C08C827F0370900ADABB8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08C727F0370900ADABB8 /* File.swift */; };
+		2B3C08C927F0370900ADABB8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08C727F0370900ADABB8 /* File.swift */; };
+		2B3C08CB27F03B8200ADABB8 /* File_Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */; };
+		2B3C08CC27F03B8200ADABB8 /* File_Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */; };
+		2B3C08CE27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */; };
+		2B3C08CF27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,12 @@
 		2B3C087D27EFEBAB00ADABB8 /* LayoutOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOperator.swift; sourceTree = "<group>"; };
 		2B3C08BA27F0176900ADABB8 /* LayoutOperator+Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutOperator+Location.swift"; sourceTree = "<group>"; };
 		2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LayoutOperator+Size.swift"; sourceTree = "<group>"; };
+		2B3C08BF27F0334700ADABB8 /* PlaygroundBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundBook.swift; sourceTree = "<group>"; };
+		2B3C08C127F0351000ADABB8 /* PlaygroundBook+Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaygroundBook+Manifest.swift"; sourceTree = "<group>"; };
+		2B3C08C427F036C700ADABB8 /* File_Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_Folder.swift; sourceTree = "<group>"; };
+		2B3C08C727F0370900ADABB8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_Plist.swift; sourceTree = "<group>"; };
+		2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundChapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +78,7 @@
 		2B3C085427EF2BF900ADABB8 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B3C08C327F0368E00ADABB8 /* FileSystemMock */,
 				2B3C085727EF2BFA00ADABB8 /* Assets.xcassets */,
 				2B3C087727EF448200ADABB8 /* main.swift */,
 			);
@@ -88,6 +105,7 @@
 		2B3C087B27EFEB5400ADABB8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B3C08BE27F0333600ADABB8 /* PlaygroundBook */,
 				2B3C087C27EFEB8B00ADABB8 /* LayoutOperator */,
 			);
 			path = iOS;
@@ -101,6 +119,26 @@
 				2B3C08BC27F017FB00ADABB8 /* LayoutOperator+Size.swift */,
 			);
 			path = LayoutOperator;
+			sourceTree = "<group>";
+		};
+		2B3C08BE27F0333600ADABB8 /* PlaygroundBook */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C08BF27F0334700ADABB8 /* PlaygroundBook.swift */,
+				2B3C08C127F0351000ADABB8 /* PlaygroundBook+Manifest.swift */,
+				2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */,
+			);
+			path = PlaygroundBook;
+			sourceTree = "<group>";
+		};
+		2B3C08C327F0368E00ADABB8 /* FileSystemMock */ = {
+			isa = PBXGroup;
+			children = (
+				2B3C08C427F036C700ADABB8 /* File_Folder.swift */,
+				2B3C08C727F0370900ADABB8 /* File.swift */,
+				2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */,
+			);
+			path = FileSystemMock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,10 +242,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3C08BD27F017FB00ADABB8 /* LayoutOperator+Size.swift in Sources */,
+				2B3C08C027F0334700ADABB8 /* PlaygroundBook.swift in Sources */,
+				2B3C08C227F0351000ADABB8 /* PlaygroundBook+Manifest.swift in Sources */,
 				2B3C087827EF448200ADABB8 /* main.swift in Sources */,
 				2B3C087E27EFEBAB00ADABB8 /* LayoutOperator.swift in Sources */,
 				2B3C08BB27F0176900ADABB8 /* LayoutOperator+Location.swift in Sources */,
 				2B3C087427EF2C8500ADABB8 /* AppleBox.docc in Sources */,
+				2B3C08C827F0370900ADABB8 /* File.swift in Sources */,
+				2B3C08CB27F03B8200ADABB8 /* File_Plist.swift in Sources */,
+				2B3C08C527F036C700ADABB8 /* File_Folder.swift in Sources */,
+				2B3C08CE27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3C08CF27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */,
 				2B3C087927EF448200ADABB8 /* main.swift in Sources */,
+				2B3C08C927F0370900ADABB8 /* File.swift in Sources */,
+				2B3C08C627F036C700ADABB8 /* File_Folder.swift in Sources */,
+				2B3C08CC27F03B8200ADABB8 /* File_Plist.swift in Sources */,
 				2B3C087527EF2C8500ADABB8 /* AppleBox.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

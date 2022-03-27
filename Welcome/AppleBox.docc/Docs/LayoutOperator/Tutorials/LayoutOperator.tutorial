@@ -7,7 +7,7 @@
     }
     
     @Chapter(name: "Quick Start") {
-        Test
+        WIP
         
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
         

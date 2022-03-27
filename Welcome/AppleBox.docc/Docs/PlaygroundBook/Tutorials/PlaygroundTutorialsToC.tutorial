@@ -1,0 +1,15 @@
+@Tutorials(name: "HackPlaygroundBook") {
+    @Intro(title: "Hack PlaygroundBook") {
+        Hack PlaygroundBook
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+    }
+    
+    @Chapter(name: "Create a Book") {
+        WIP
+        
+<!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
+        
+        @TutorialReference(tutorial: "doc:Cteate-a-PlaygroundBook-on-iPad")
+    }
+}

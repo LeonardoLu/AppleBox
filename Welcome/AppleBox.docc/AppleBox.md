@@ -12,9 +12,12 @@ WIP
 
 ### About PlaygroundBook
 
-- <doc:PlaygroundBook>
+- <doc:PlaygroundBookStart>
 
 ### About UI
 
 - <doc:LayoutOperatorStarter>
+
+### Helper
+- <doc:DocHelper+FileType>
 

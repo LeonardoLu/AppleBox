@@ -1,26 +1,26 @@
 @Tutorial(time: 5) {
     @Intro(title: "Make a view be constrained as same as another view") {
-        Test
+        WIP
         
 <!--        @Image(source: <#file#>, alt: "<#accessible description#>")-->
     }
     
     @Section(title: "Create a project and add LayoutOperator") {
         @ContentAndMedia {
-            Test
+            WIP
             
 <!--            @Image(source: <#file#>, alt: "<#accessible description#>")-->
         }
         
         @Steps {
             @Step {
-                A
+                WIP
                 
 <!--                @Image(source: <#file#>, alt: "<#accessible description#>")-->
             }
             
             @Step {
-                B
+                WIP
                 
 <!--                @Code(name: "<#display name#>", file: <#filename.swift#>)-->
             }
