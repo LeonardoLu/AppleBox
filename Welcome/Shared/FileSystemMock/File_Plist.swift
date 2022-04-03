@@ -7,11 +7,8 @@
 
 import Foundation
 class File_Plist: File {
-
-    /// Could be anything legal.
-    var name: String = ""
-
-    /// Must be `.plist`
-    var `extension`: String = ""
+    override init(name: String, extension: String = ".plist") {
+        super.init(name: name, extension: `extension`)
+    }
 
 }

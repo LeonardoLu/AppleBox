@@ -26,6 +26,18 @@
 		2B3C08CC27F03B8200ADABB8 /* File_Plist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */; };
 		2B3C08CE27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */; };
 		2B3C08CF27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */; };
+		2BF80B2F27F92AEA0075B6BB /* PlaygroundChapter+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B2E27F92AEA0075B6BB /* PlaygroundChapter+Manifest.swift */; };
+		2BF80B3127F931C80075B6BB /* PlaygroundPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3027F931C80075B6BB /* PlaygroundPage.swift */; };
+		2BF80B3327F932F20075B6BB /* File_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3227F932F20075B6BB /* File_Swift.swift */; };
+		2BF80B3427F932F20075B6BB /* File_Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3227F932F20075B6BB /* File_Swift.swift */; };
+		2BF80B3627F9334D0075B6BB /* PlaygroundPage+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3527F9334D0075B6BB /* PlaygroundPage+Manifest.swift */; };
+		2BF80B3727F9334D0075B6BB /* PlaygroundPage+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3527F9334D0075B6BB /* PlaygroundPage+Manifest.swift */; };
+		2BF80B3927F942580075B6BB /* CutscenePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3827F942580075B6BB /* CutscenePage.swift */; };
+		2BF80B3A27F942580075B6BB /* CutscenePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3827F942580075B6BB /* CutscenePage.swift */; };
+		2BF80B3C27F944FE0075B6BB /* CutscenePage+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3B27F944FE0075B6BB /* CutscenePage+Manifest.swift */; };
+		2BF80B3D27F944FE0075B6BB /* CutscenePage+Manifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3B27F944FE0075B6BB /* CutscenePage+Manifest.swift */; };
+		2BF80B3F27F98B810075B6BB /* PlaygroundModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3E27F98B810075B6BB /* PlaygroundModule.swift */; };
+		2BF80B4027F98B810075B6BB /* PlaygroundModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF80B3E27F98B810075B6BB /* PlaygroundModule.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +56,13 @@
 		2B3C08C727F0370900ADABB8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_Plist.swift; sourceTree = "<group>"; };
 		2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundChapter.swift; sourceTree = "<group>"; };
+		2BF80B2E27F92AEA0075B6BB /* PlaygroundChapter+Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaygroundChapter+Manifest.swift"; sourceTree = "<group>"; };
+		2BF80B3027F931C80075B6BB /* PlaygroundPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundPage.swift; sourceTree = "<group>"; };
+		2BF80B3227F932F20075B6BB /* File_Swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File_Swift.swift; sourceTree = "<group>"; };
+		2BF80B3527F9334D0075B6BB /* PlaygroundPage+Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaygroundPage+Manifest.swift"; sourceTree = "<group>"; };
+		2BF80B3827F942580075B6BB /* CutscenePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutscenePage.swift; sourceTree = "<group>"; };
+		2BF80B3B27F944FE0075B6BB /* CutscenePage+Manifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CutscenePage+Manifest.swift"; sourceTree = "<group>"; };
+		2BF80B3E27F98B810075B6BB /* PlaygroundModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundModule.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +146,12 @@
 				2B3C08BF27F0334700ADABB8 /* PlaygroundBook.swift */,
 				2B3C08C127F0351000ADABB8 /* PlaygroundBook+Manifest.swift */,
 				2B3C08CD27F0443800ADABB8 /* PlaygroundChapter.swift */,
+				2BF80B2E27F92AEA0075B6BB /* PlaygroundChapter+Manifest.swift */,
+				2BF80B3027F931C80075B6BB /* PlaygroundPage.swift */,
+				2BF80B3527F9334D0075B6BB /* PlaygroundPage+Manifest.swift */,
+				2BF80B3827F942580075B6BB /* CutscenePage.swift */,
+				2BF80B3B27F944FE0075B6BB /* CutscenePage+Manifest.swift */,
+				2BF80B3E27F98B810075B6BB /* PlaygroundModule.swift */,
 			);
 			path = PlaygroundBook;
 			sourceTree = "<group>";
@@ -137,6 +162,7 @@
 				2B3C08C427F036C700ADABB8 /* File_Folder.swift */,
 				2B3C08C727F0370900ADABB8 /* File.swift */,
 				2B3C08CA27F03B8200ADABB8 /* File_Plist.swift */,
+				2BF80B3227F932F20075B6BB /* File_Swift.swift */,
 			);
 			path = FileSystemMock;
 			sourceTree = "<group>";
@@ -243,15 +269,22 @@
 			files = (
 				2B3C08BD27F017FB00ADABB8 /* LayoutOperator+Size.swift in Sources */,
 				2B3C08C027F0334700ADABB8 /* PlaygroundBook.swift in Sources */,
+				2BF80B3C27F944FE0075B6BB /* CutscenePage+Manifest.swift in Sources */,
+				2BF80B3127F931C80075B6BB /* PlaygroundPage.swift in Sources */,
+				2BF80B2F27F92AEA0075B6BB /* PlaygroundChapter+Manifest.swift in Sources */,
+				2BF80B3927F942580075B6BB /* CutscenePage.swift in Sources */,
 				2B3C08C227F0351000ADABB8 /* PlaygroundBook+Manifest.swift in Sources */,
 				2B3C087827EF448200ADABB8 /* main.swift in Sources */,
 				2B3C087E27EFEBAB00ADABB8 /* LayoutOperator.swift in Sources */,
 				2B3C08BB27F0176900ADABB8 /* LayoutOperator+Location.swift in Sources */,
 				2B3C087427EF2C8500ADABB8 /* AppleBox.docc in Sources */,
+				2BF80B3327F932F20075B6BB /* File_Swift.swift in Sources */,
 				2B3C08C827F0370900ADABB8 /* File.swift in Sources */,
 				2B3C08CB27F03B8200ADABB8 /* File_Plist.swift in Sources */,
 				2B3C08C527F036C700ADABB8 /* File_Folder.swift in Sources */,
 				2B3C08CE27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */,
+				2BF80B3F27F98B810075B6BB /* PlaygroundModule.swift in Sources */,
+				2BF80B3627F9334D0075B6BB /* PlaygroundPage+Manifest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +293,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B3C08CF27F0443800ADABB8 /* PlaygroundChapter.swift in Sources */,
+				2BF80B3D27F944FE0075B6BB /* CutscenePage+Manifest.swift in Sources */,
 				2B3C087927EF448200ADABB8 /* main.swift in Sources */,
+				2BF80B4027F98B810075B6BB /* PlaygroundModule.swift in Sources */,
+				2BF80B3427F932F20075B6BB /* File_Swift.swift in Sources */,
 				2B3C08C927F0370900ADABB8 /* File.swift in Sources */,
+				2BF80B3A27F942580075B6BB /* CutscenePage.swift in Sources */,
+				2BF80B3727F9334D0075B6BB /* PlaygroundPage+Manifest.swift in Sources */,
 				2B3C08C627F036C700ADABB8 /* File_Folder.swift in Sources */,
 				2B3C08CC27F03B8200ADABB8 /* File_Plist.swift in Sources */,
 				2B3C087527EF2C8500ADABB8 /* AppleBox.docc in Sources */,

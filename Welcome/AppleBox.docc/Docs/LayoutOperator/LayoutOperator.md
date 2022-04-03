@@ -1,4 +1,8 @@
-# ``LayoutOperator``
+# ``Welcome/LayoutOperator``
+
+@Metadata {
+    @DocumentationExtension(mergeBehavior: override)
+}
 
 LayoutOperator
 
@@ -6,5 +10,4 @@ LayoutOperator
 
 LayoutOperator
 
-## Topics
 

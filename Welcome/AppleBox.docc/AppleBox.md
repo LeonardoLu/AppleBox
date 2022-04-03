@@ -11,8 +11,8 @@ WIP
 ## Topics
 
 ### About PlaygroundBook
-
-- <doc:PlaygroundBookStart>
+- <doc:PlaygroundBookStructure>
+- <doc:PlaygroundBookCheetSheet>
 
 ### About UI
 

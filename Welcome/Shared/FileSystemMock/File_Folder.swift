@@ -7,15 +7,8 @@
 
 import Foundation
 
-/// Something behavior like a folder
-protocol File_Folder_Like: File {
-
-}
-
-class File_Folder: File_Folder_Like {
-    /// Could be anything legal.
-    var name: String = ""
-
-    /// Just a folder.
-    var `extension`: String = ""
+class File_Folder: File {
+    override init(name: String, extension: String = "") {
+        super.init(name: name, extension: `extension`)
+    }
 }

@@ -12,5 +12,5 @@ WIP
 
 - ``File``
 - ``File_Folder``
-- ``File_Folder_Like``
 - ``File_Plist``
+- ``File_Swift``

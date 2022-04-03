@@ -6,7 +6,11 @@
 //
 
 import Foundation
-protocol File {
-    var name: String { get set }
-    var `extension`: String { get }
+class File {
+    var File_Name: String = ""
+    var File_Extension: String = ""
+    init(name: String, extension: String) {
+        File_Name = name
+        File_Extension = `extension`
+    }
 }
