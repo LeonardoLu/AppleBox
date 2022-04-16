@@ -1,0 +1,49 @@
+@GuideBook(title: "MyApp", icon: title.png, background: titleBackground.png, firstFile: App.swift) {
+    @WelcomeMessage(title: "Hello") {
+        0
+    }
+    @Guide {
+        @Step(title: "Introduction") {
+            @ContentAndMedia {
+                ![](intro.png)  
+                
+                2 
+                
+                3
+                
+                @GuideButton(type: walkthrough, title: "Start Walkthrough", description: "A description for button")
+                
+            }
+            
+            @Task(type: walkthrough, title: "Learn App", id: "Learn_App", file: App.swift) {
+                4
+                
+                @Page(id: "1.1", title: "This is App") {
+                    5
+                }
+                @Page(id: "1.2", title: "This is Main") {
+                    6
+                }
+                @Page(id: "1.3", title: "This is Content") {
+                    7
+                }
+                @Page(id: "1.4", title: "This is Window") {
+                    8
+                }
+            }
+            @Task(type: walkthrough, title: "Learn ContentView", id: "Learn_ContentView", file: ContentView.swift) {
+                9
+                
+                @Page(id: "2.1", title: "This is ContentView") {
+                    10
+                }
+                @Page(id: "2.2", title: "This is ContentView_Preview") {
+                    11
+                }
+                @Page(id: "2.3", title: "This is Text") {
+                    12
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@GuideBook(title: "MyApp", icon: title.png, background: titleBackground.png, firstFile: ContentView.swift) {
+    @WelcomeMessage(title: "Hello") {
+        0
+    }
+    @Guide {
+        @Step(title: "Learn ContentView") {
+            @ContentAndMedia {
+                ![](intro.png)  
+                
+                2 
+                
+                3
+                
+                @GuideButton(type: walkthrough, title: "Start Walkthrough", description: "A description for button")
+            }
+            @Task(type: walkthrough, title: "Say Hello,World!", id: "Hello_World", file: ContentView.swift) {
+                4
+                
+                @Page(id: "1.1", title: "Use `Text` to show text content.") {
+                    5
+                }
+            }
+        }
+    }
+}

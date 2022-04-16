@@ -1,0 +1,351 @@
+@Tutorial(time: 45) {
+    @Intro(title: "为 .swiftpm App 添加 Playgrounds 的引导功能") {
+        你是否很在意 Playgrounds 上那些官方工程的引导功能？在解读它们的源码之后，让我们看看 Playgrounds 的开发人员隐藏了哪些特别的小技巧。
+        
+        本文将讲述作者在阅读源码和工程之后掌握到的制作 .swiftpm App 引导内容的方法和技巧。本文将使用 [Start.swiftpm](https://github.com/LeonardoLu/AppleBox/tree/main/Demo/Swift_Student_Challenge/Start.swiftpm) 作为初始工程，最终的结果在 [Final.swiftpm](https://github.com/LeonardoLu/AppleBox/tree/main/Demo/Swift_Student_Challenge/Final.swiftpm)。
+        
+        @Image(source: SPM_WriteTutorials_Art_cover.png, alt: "最终成果")
+    }
+    @Section(title: "准备工作：创建一个引导页文件(夹)") {
+        @ContentAndMedia {
+            在 .swiftpm 文件夹中创建多个特殊的文件夹和文件，Playgrounds 将自动将这些文件识别为引导内容。
+            
+            如果你使用的是我提供的初始模板，可以跳过这一环节。
+        }
+        @Steps {
+            @Step {
+                进入到 .swiftpm 文件夹中。你将看到类似的文件结构。
+                
+                @Image(source: SPM_WTA_S0S0.png, alt: "")
+            }
+            @Step {
+                新建一个文件夹，名称为 **Guide** 。
+                
+                @Image(source: SPM_WTA_S0S1.png, alt: "")
+            }
+            @Step {
+                进入到 **Guide** 文件夹中，创建一个 **Walkthrough.tutorial** 文件。你可以通过以下两种方式创建这个文件：1. 创建一个空文本文件，将它的名称和扩展名替换成 **Walkthrough.tutorial** 。2. 使用 Xcode 新建文件功能，搜索 **tutorial** ，创建对应的文件，再将它复制粘贴到 **Guide** 中，记得删去其中所有的内容。
+                
+                @Image(source: SPM_WTA_S0S2.png, alt: "")
+            }
+        }
+    }
+    
+    @Section(title: "准备工作：创建多语言文件") {
+        @ContentAndMedia {
+            Playgrounds 的引导内容需要多语言文件的支持才能够正常使用，因此我们需要创建所需要语种的多语言文件。
+            
+            如果你使用的是我提供的初始模板，可以跳过这一环节。
+        }
+        @Steps {
+            @Step {
+                进入到 **Guide** 文件夹中。创建一个名为 **Resources** 文件夹。
+                
+                @Image(source: SPM_WTA_S1S0.png, alt: "")
+            }
+            @Step {
+                进入到 **Resources** 中，创建一个叫 **zh_CN.lproj** 的文件夹。如果你熟悉 Xcode 工程的多语言支持方案，你能明白 `zh_CN` 是简体中文的语言码，同时你也能想到下一步我们需要做什么。
+                
+                @Image(source: SPM_WTA_S1S1.png, alt: "")
+            }
+            @Step {
+                进入到 **zh_CN.lproj** 中，创建一个 **Localizable.strings** 文件。你可以通过以下两种方式创建这个文件：1. 创建一个空文本文件，将它的名称和扩展名替换成 **Localizable.strings** 。2. 使用 Xcode 新建文件功能，搜索 **strings** ，创建对应文件，在将它复制粘贴到 **zh_CN.lproj** 中。
+                
+                @Image(source: SPM_WTA_S1S2.png, alt: "")
+            }
+            @Step {
+                进入到 **Resources** 中，创建一个叫 **en.lproj** 的文件夹。
+                
+                @Image(source: SPM_WTA_S1S3.png, alt: "")
+            }
+            @Step {
+                进入到 **en.lproj** 中，创建一个 **Localizable.strings** 文件。
+                
+                @Image(source: SPM_WTA_S1S4.png, alt: "")
+            }
+        }
+    }
+    
+    @Section(title: "添加一个最简单的引导内容") {
+        @ContentAndMedia {
+            现在，我们可以开始创作引导内容了，让我们打开 **Walkthrough.tutorial** 文件，编写一个最简单的结构，让 Playgrounds 展示引导内容。
+        }
+        @Steps {
+            @Step {
+                打开 **Walkthrough.tutorial** 文件。我使用的是 Xcode。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S2S0.swift) {
+                    @Image(source: SPM_WTA_S2S0.png, alt: "")
+                }
+            }
+            @Step {
+                在文件中写入这些代码，这是最外层的结构，定义了 **GuideBook** 的相关属性，也就是我们的引导内容了。`title` 属性描述了 **GuideBook** 的名称。`firstFile` 属性指明了展示时需要打开的代码文件。它将展示在图中框选的位置。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S2S1.swift) {
+                    @Image(source: SPM_WTA_S2S1.png, alt: "")
+                }
+            }
+            @Step {
+                接下来，让我们为 **GuideBook** 添加欢迎内容。它将展示在图中框选的位置。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S2S2.swift) {
+                    @Image(source: SPM_WTA_S2S2.png, alt: "")
+                }
+            }
+            > Note: @Task 结构中的 file 属性指明了在进行这个引导内容时需要打开的代码文件，这个打开时 Playgrounds 自动完成的。
+            @Step {
+                最后让我们添加一些最基本的引导内容，不用急着编写它们，我们会在接下来的教程中和它们打交道，现在就让我们简单的复制粘贴它们。它们将展示在图中框选的位置。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S2S3.swift) {
+                    @Image(source: SPM_WTA_S2S3.png, alt: "")
+                }
+            }
+            @Step {
+                现在，让我们看看目前的成果。将 .swiftpm 文件传到 iPad 使用 Playgrounds 中。你将看到类似这样的画面。
+                
+                @Image(source: SPM_WTA_S2S4.png, alt: "")
+            }
+            @Step {
+                不要紧张，你大概没有做错什么或遗漏了什么步骤。还记得我们一开始创建的多语言文件吗？我们还没用到它们，现在让我们进行后续的教程，把这些引导内容中的奇怪内容挨个 debug。
+                
+                @Image(source: SPM_WTA_S2S4.png, alt: "")
+            }
+        }
+    }
+    @Section(title: "为 GuideBook 添加多语言支持") {
+        @ContentAndMedia {
+            需要强调的是，截止目前，Playgrounds 上的引导内容依然需要在多语言支持的条件下才能正常显示内容。因此让我们来完善这些多语言文件。
+            
+            如果你很熟悉 iOS 的多语言方案，那么接下来的内容对你来说基本就是轻车熟路。
+            
+            如果你不熟悉，那么也不要慌张，iOS 的多语言方案很简单：在 `.strings` 文件中按照一定的格式写入**键**与**值**的映射关系，那么程序会自动根据设备的语言环境进行切换。
+            
+            上面提到我们需要完成键值的映射关系，那么很明显**值**就是我们想呈现的内容。那么**键**呢？回忆一下上一个步骤中霸占我们引导内容的那些长文本，或许它们就是被 Playgrounds 藏起来的东西？
+            
+            > Important: 需要提醒的是，如果你跟着教程操作发现相应的位置并没有展示预期的内容；那么你可以点击运行你的 App ，然后将它的进程直接杀掉，再回到 Playgrounds 页面，这时你会看到 Playgrounds 重新编译展示引导内容，随后便会展示预期的内容了。在这个教程的最后，我们会解决这个小问题，现在，让我们先忽视它。
+        }
+        
+        @Steps {
+            ## 首先，让我们为 **GuideBook** 添加正确的标题文案。
+            > Important: 当然，WWDC Swift Student Challenge 的评委都是在英语环境的设备上运行的，因此最终你都需要编写 **en.lproj** 中的 **Localizable.strings** 文件。
+            @Step {
+                打开 **zh_CN.lproj** 里的 **Localizable.strings** 文件。我使用的是 Xcode。如果你的 iPad 是其他语言环境，那么你就要使用对应语言的 **Localizable.strings** 文件，例如英语的在 **en.lproj** 文件夹中。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S3S0.swift) {
+                    @Image(source: SPM_WTA_S3S0.png, alt: "")
+                }
+            }
+            @Step {
+                在文件中写入这些的代码。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                
+                @Code(name: "Localizable.strings", file: SPM_WTA_S3S1.swift) {
+                    @Image(source: SPM_WTA_S3S1.png, alt: "")
+                }
+            }
+            ## 接下来，让我们为 **GuideBook** 添加正确的欢迎文案。
+            @Step {
+                在文件中写入这些的代码。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                
+                @Code(name: "Localizable.strings", file: SPM_WTA_S3S2.swift) {
+                    @Image(source: SPM_WTA_S3S2.png, alt: "")
+                }
+            }
+            ## 一鼓作气，让我们把剩下的这些文案也补上！
+            @Step {
+                将右侧展示出来的剩余错误位置的文字添加到 **Localizable.strings** 中。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                
+                @Code(name: "Localizable.strings", file: SPM_WTA_S3S3.swift) {
+                    @Image(source: SPM_WTA_S3S3.png, alt: "")
+                }
+            }
+            ## 最后一步，添加代码文件的引导文案。
+            @Step {
+                如果你还记得，我们在 **Walkthrough.tutorial** 不只写了这些内容，还有 `Page` 的内容。点击图中框选的位置，Playgrounds 将为我们展现它的出色引导能力。
+                
+                @Image(source: SPM_WTA_S3S4.png, alt: "")
+            }
+            @Step {
+                在 **Localizable.strings** 中写入这些的代码。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                
+                @Code(name: "Localizable.strings", file: SPM_WTA_S3S5.swift) {
+                    @Image(source: SPM_WTA_S3S5.png, alt: "")
+                }
+            }
+        }
+    }
+    
+    @Section(title: "稍作休息：看看我们都做了啥？") {
+        @ContentAndMedia {
+            经过这些内容，你已经掌握了大部分制作 **GuideBook** 的技巧了。
+            
+            别急着继续进行学习，现在该是复习的时候了，适当的回顾与观察能够帮助你举一反三。
+            
+            > Note: 本章节将讲述作者探索过程中发现的一些关于多语言文案命名的规律，如果你很急，那么跳过也不会影响你。
+        }
+        
+        @Steps {
+            ## 那些在 Walkthrough.tutorial 中的数字，是有意义的。
+            @Step {
+                打开 **Walkthrough.tutorial** 文件，对照着一开始满篇错误的引导内容和它们的多语言文案的键。你会发现标记为 0 的那一段的键的结尾是 Paragraph0 ，而标记为 1 的那一段的键的结尾是 Paragraph1 。没错，不论是哪个模块的文段，它的键的结尾都是 `Paragraph` + `它的全局段落号`，而这个全局段落号是从 0 开始计数的。
+                @Image(source: SPM_WTA_S2S4.png, alt: "")
+            }
+            ## 如果你善于观察，你会在 Localizable.strings 中发现许多“吸引眼球👀”的单词。
+            @Step {
+                打开 **Localizable.strings** 文件，静下来看看我们写的这些键，你是否发现一些规律？
+                @Code(name: "Localizable.strings", file: SPM_WTA_S4S1.swift) {}
+            }
+            @Step {
+                让我们来一些提示
+                @Code(name: "Localizable.strings", file: SPM_WTA_S4S2.swift) {}
+            }
+            @Step {
+                没错，通过以 `..` 进行切片，再将 **GuideBook** 、**WelcomeMessage** 和 **Introduction** 、**Hello** 这些标注语法和我们声明的内容分离，就得到这样层层推进的结构了。而最后的一段，指明了文案的类别，即它所用到的位置。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S4S3.swift) {}
+            }
+            ## 接下来，让我们进一步推进我们的结论。
+            @Step {
+                以相同的方法分割剩下的键，我们也能得出类似的结论。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S4S4.swift) {}
+            }
+            @Step {
+                更进一步，每一个 **GuideBook** 标注的语法结构通过`title`、`id`、编号进行互相之间的区分，具体使用哪一个，则按照`title` => `id` => 编号的优先度。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S4S5.swift) {}
+            }
+        }
+    }
+    @Section(title: "为 GuideBook 添加更丰富的引导内容。") {
+        @ContentAndMedia {
+            接下来，让我们为 **GuideBook** 添加一些图片、一个按钮以及一些具体的代码指引。
+        }
+        @Steps {
+            ## 为 **GuideBook** 添加一张图片。
+            @Step {
+                在 **Guide** 文件夹中添加一个图片文件，我添加的是 **Intro.png** 。 
+                @Image(source: SPM_WTA_S5S0.png, alt: "")
+            }
+            @Step {
+                打开 **Walkthrough.tutorial** 文件。
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S1.swift) {}
+            }
+            @Step {
+                在 `@ContentAndMedia` 结构中添加一行段落，记得调整其他段落的标号，帮助我们补写多语言文案。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S2.swift) {}
+            }
+            @Step {
+                打开你所要使用的语言的 **Localizable.strings** 文件。我们期望将图片展示在 1 号段落。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S3.swift) {}
+            }
+            @Step {
+                先修改已经存在的文案的键。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S4.swift) {}
+            }
+            @Step {
+                再添加1号段落的文案，这里可以依据2号段落的文案的键填写1号的键。文案的内容是一段 MARKDOWN 的图片插入语法。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S5.swift) {
+                    @Image(source: SPM_WTA_S5S5.png, alt: "")
+                }
+            }
+            ## 添加一个游览代码的按钮
+            > Note: 点击这个按钮将自动按照顺序完成所有 @Step 中的引导。
+            @Step {
+                打开 **Walkthrough.tutorial** 文件。
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S6.swift) {}
+            }
+            @Step {
+                在 `@ContentAndMedia` 结构中添加一行，具体内容如右侧所示。当然它一定也需要多语言的支持，但我们无须猜测新的结构在键中的关键字，将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的按钮。
+                
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S7.swift) {
+                    @Image(source: SPM_WTA_S5S7.png, alt: "")
+                }
+            }
+            @Step {
+                打开你所要使用的语言的 **Localizable.strings** 文件。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S8.swift) {}
+            }
+            @Step {
+                添加按钮的文案。然后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S9.swift) {
+                    @Image(source: SPM_WTA_S5S9.png, alt: "")
+                }
+            }
+            ## 为 **GuideBook** 添加逐行代码引导。
+            > Note: 如果你看过 [Final.swiftpm](https://github.com/LeonardoLu/AppleBox/tree/main/Demo/Swift_Student_Challenge/Final.swiftpm) 或者 Playgrounds 上的一些官方 demo，你会发现它们的引导都会讲解具体的代码内容。接下来我们将实现这样的功能。
+            > Important: 让我们加快速度。
+            @Step {
+                打开 **Walkthrough.tutorial** 文件。
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S10.swift) {}
+            }
+            @Step {
+                写入这些内容，它们将创建 `App.swift` 文件中的引导。这里每一个 @Page 的 id 将作为后续的索引使用，我们可以先记住。
+                @Code(name: "Walkthrough.tutorial", file: SPM_WTA_S5S11.swift) {}
+            }
+            @Step {
+                打开你所要使用的语言的 **Localizable.strings** 文件。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S12.swift) {}
+            }
+            @Step {
+                直接补充这些文案，它们的键很容易推理出来。
+                @Code(name: "Localizable.strings", file: SPM_WTA_S5S13.swift) {}
+            }
+            @Step {
+                打开 **App.swift** 文件。
+                @Code(name: "App.swift", file: SPM_WTA_S5S14.swift) {}
+            }
+            @Step {
+                写入这些新的标注。这些标注将高亮包裹着的代码。`//#-learning-task(Learn_App)` 标注了 @Task 结构的位置，括号中填写 @Task 的 id。`/*#-code-walkthrough(1.1)*/` 标注了 @Page 结构的位置，括号中填写 @Page 的 id，应当成对使用，将需要高亮的代码上下包裹着。
+                @Code(name: "App.swift", file: SPM_WTA_S5S15.swift) {}
+            }
+            @Step {
+                完成后将 .swiftpm 传给 iPad 通过 Playgrounds 打开。你将看到框选内容展示刚刚写入的内容。
+                @Image(source: SPM_WTA_S5S16.png, alt: "")
+            }
+            @Step {
+                这是 `/*#-code-walkthrough(1.1)*/` 的内容。
+                @Image(source: SPM_WTA_S5S17.png, alt: "")
+            }
+            @Step {
+                这是 `/*#-code-walkthrough(1.2)*/` 的内容。
+                @Image(source: SPM_WTA_S5S18.png, alt: "")
+            }
+            @Step {
+                这是 `/*#-code-walkthrough(1.3)*/` 的内容。
+                @Image(source: SPM_WTA_S5S19.png, alt: "")
+            }
+            @Step {
+                这是 `/*#-code-walkthrough(1.4)*/` 的内容。
+                @Image(source: SPM_WTA_S5S20.png, alt: "")
+            }
+        }
+    }
+    @Section(title: "收尾：解决 .strings 的编译问题") {
+        @ContentAndMedia {
+            其实很简单，把我们写的 .strings 编译后再替换就可以了。
+        }
+        @Steps {
+            @Step {
+                随便新建一个 Xcode 工程。
+                @Image(source: SPM_WTA_S6S0.png, alt: "")
+            }
+            @Step {
+                在工程中新建 **Resources**、**en.lproj**、**zh_CN.lproj** 这几个文件夹，并添加 **Localizable.strings** 文件。
+                @Image(source: SPM_WTA_S6S1.png, alt: "")
+            }
+            @Step {
+                将 .swiftpm 的文案复制粘贴到工程的 .strings 文件中。点击构建 App 或快捷键 **Command⌘+B** 。
+            }
+            @Step {
+                等到构建完成 Build Success。在状态栏点击 `Product` => `Show Build Folder in Finder`。你会看到类似的文件结构。
+                @Image(source: SPM_WTA_S6S3.png, alt: "")
+            }
+            @Step {
+                打开 **Product** 文件夹，能看到 Debug-iphonesimulator 文件夹，这个文件夹的名称会根据你选择的构建目标设备不同而变化，如果有不一样的或者多个文件夹，可以都尝试打开；能看到 xxx.app 文件，右击 => `Show Package Contents`，会看到这样的文件结构。
+                @Image(source: SPM_WTA_S6S4.png, alt: "")
+            }
+            @Step {
+                将 **en.lproj**、**zh_CN.lproj** 这两个文件夹复制粘贴替换 .swiftpm 中的两个对应同名文件夹就可以了。删除 Playgrounds 上所有副本，上传一个新的试试！
+                @Image(source: SPM_WTA_S6S5.png, alt: "")
+            }
+        }
+    }
+    
+}
