@@ -1,5 +1,5 @@
 @Tutorials(name: "SwiftPM App") {
-    @Intro(title: "Meet .swiftpm app") {
+    @Intro(title: "Meet .swiftpm App") {
         在这里，让我们一起发现一些只有在 Playgrounds 上可以使用的特殊能力。
         
 <!--        @Image(source: SPM_banner_cover.png, alt: "iOS Club icon")-->

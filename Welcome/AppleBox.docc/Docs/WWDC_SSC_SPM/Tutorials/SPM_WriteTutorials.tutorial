@@ -4,11 +4,13 @@
         
         本文将讲述作者在阅读源码和工程之后掌握到的制作 .swiftpm App 引导内容的方法和技巧。本文将使用 [Start.swiftpm](https://github.com/LeonardoLu/AppleBox/tree/main/Demo/Swift_Student_Challenge/Start.swiftpm) 作为初始工程，最终的结果在 [Final.swiftpm](https://github.com/LeonardoLu/AppleBox/tree/main/Demo/Swift_Student_Challenge/Final.swiftpm)。
         
+        > Important: 你需要在 `Package.swift` 中指定 `executableTarget` 的内容，即可执行文件的路径。否则 Playgrounds 会将根目录认定为可执行文件的存放目录，这将导致引导内容也被认为是 App 构建的一部分而被 Playgrounds 忽视并告警。
+        
         @Image(source: SPM_WriteTutorials_Art_cover.png, alt: "最终成果")
     }
     @Section(title: "准备工作：创建一个引导页文件(夹)") {
         @ContentAndMedia {
-            在 .swiftpm 文件夹中创建多个特殊的文件夹和文件，Playgrounds 将自动将这些文件识别为引导内容。
+            在 .swiftpm 文件夹中创建多个特殊的文件夹和文件，Playgrounds 将自动把这些文件识别为引导内容。
             
             如果你使用的是我提供的初始模板，可以跳过这一环节。
         }
@@ -92,7 +94,7 @@
                     @Image(source: SPM_WTA_S2S2.png, alt: "")
                 }
             }
-            > Note: @Task 结构中的 file 属性指明了在进行这个引导内容时需要打开的代码文件，这个打开时 Playgrounds 自动完成的。
+            > Note: @Task 结构中的 file 属性指明了在进行这个引导内容时需要打开的代码文件，这个行为是 Playgrounds 自动完成的。
             @Step {
                 最后让我们添加一些最基本的引导内容，不用急着编写它们，我们会在接下来的教程中和它们打交道，现在就让我们简单的复制粘贴它们。它们将展示在图中框选的位置。
                 
